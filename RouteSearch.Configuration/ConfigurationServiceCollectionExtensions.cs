@@ -15,7 +15,8 @@ namespace RouteSearch.Configuration
             {
                 throw new ArgumentNullException(nameof(assembly));
             }
-            //var genericBaseConsumer = typeof(BaseEventConsumer<,>);
+            
+            var genericBaseConsumer = typeof(Action);
 
             foreach (var option in assembly.GetTypes())
             {
